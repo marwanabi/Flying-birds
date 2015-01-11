@@ -1,0 +1,121 @@
+
+<style type="text/css">
+
+* {
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 3s;
+  -moz-transition-timing-function: cubic-bezier(100,50,21,6);
+  -moz-transition-property: all;
+  -moz-transition-duration: .2s;
+  -moz-transition-timing-function: cubic-bezier(100,50,21,6);
+}
+h1{  font-family: 'Oswald', sans-serif;
+  color:black; 
+}
+h1:hover{
+	letter-spacing: 10px;
+}
+body {
+  background:url("http://www.desktopaper.com/wp-content/uploads/latest-minimalist-tree-wallpaper.jpg") no-repeat fixed center; 
+
+  padding-top: 70px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-weight:100;
+}
+
+
+.btn {
+  position: relative;
+  display: inline-block;
+  width: 166px;
+  height: 45px;
+  font-size: 22px;
+  line-height: 45px;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+  cursor: pointer;
+  overflow: hidden;
+}
+.btn svg {
+  position: absolute;
+  top: 0; left: 0;
+}
+.btn svg rect {
+  fill: none;
+  stroke: black;
+  stroke-width: 1;
+  stroke-dasharray: 422, 0;
+  
+  @include transition(all 1300ms $ease-out-expo);
+}
+.btn:hover svg rect {
+  stroke-width: 5;
+  stroke-dasharray: 10, 310;
+  stroke-dashoffset: 33;
+}
+
+.btn:hover {
+  color:black;
+  font-size:18px;
+  letter-spacing:1px;
+  font-weight:bold;
+}
+#koi {
+     height:200px;
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 4000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear; 
+    
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+
+}
+
+
+</style>
+<img id="koi" style="margin-top: -5%;margin-right: 19%;opacity: 0.6;" src="sun1.png"/> 
+<h1 style="margin-top: -10%;">The City</h1>
+<div class="btn">
+  <svg>
+    <rect x="0" y="0" fill="none" width="166" height="45"/>
+  </svg>
+ click here
+</div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<div id="bg" style="overflow: hidden;margin-left: 50%;margin-top: -35%;">
+  <div id="container1">
+    <ul id="scene">
+      
+      <li  class="layer" data-depth="3" style="margin-left:50%;opacity:0.5;"><img src="9.png" ></li>
+      <li  class="layer" data-depth="5" style="opacity:0.9;"><img src="9.png" ></li>
+
+      
+      
+    </ul> 
+  </div>  
+   
+</div>
+ 
+</div>
+  
+   
+ </div>  
+</div>
+
+  
+  <script src="deploy/parallax.min.js"></script>
+  <script>
+
+ 
+  var scene = document.getElementById('scene');
+  var parallax = new Parallax(scene);
+
+  </script>
+
